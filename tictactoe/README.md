@@ -1,20 +1,22 @@
 # TicTacToe
 TicTacToe.java is a basic Java implementation of the well-known Tic Tac Toe game.
 
-### How to build and test (from Terminal):
+### How to build (from Terminal):
 
-1. Make sure that you have Apache Ant installed.
+1. Make sure that you have [Apache Ant](https://ant.apache.org) installed.
 
 2. Run `ant` in the root directory, which contains the `build.xml` build file.
 
 3. Compiled java classes will be in the `bin` directory.
 
-4. Run `ant test` to run all unit tests.
+### How to test (from Terminal):
+
+1. Run `ant test` to run all unit tests.
 
 ### How to run (from Terminal):
 
 1. After building the project (i.e., running `ant`), run:
-   `java -cp bin TicTacToe`
+   `java -cp bin TicTacToe`. The application's GUI will show up.
 
 ### How to clean up (from Terminal):
 
