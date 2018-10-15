@@ -28,8 +28,8 @@ public class ClickView implements View {
             	
             	@Override
         		public void actionPerformed(ActionEvent e) {
-            		for (int i = 0; i<9 ;i++) {
-            			if(e.getSource()==blocks[i]) num = i;
+            		for (int j = 0; j<9 ;j++) {
+            			if(e.getSource()==blocks[j]) num = j;
             			break;
             		}
 

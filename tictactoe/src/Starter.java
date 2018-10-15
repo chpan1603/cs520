@@ -1,12 +1,6 @@
-import Controllers.ClickCtrl;
-import Controllers.ResetCtrl;
-import Models.Positions;
-import Views.ClickView;
-import Views.CountView;
-import Views.MessageView;
-import Views.PositionsView;
-import Views.ResetView;
-import Views.View;
+import Controllers.*;
+import Models.*;
+import Views.*;
 
 
 import java.util.*;
@@ -73,7 +67,7 @@ public class Starter {
       gui.setLocationRelativeTo(null);
       
       // Panel that shows count and text about moves
-      JPanel gameStats = new JPanel(new FlowLayout(FlowLayout.CENTER));
+      JPanel gameStats = new JPanel(new FlowLayout());
       
       // Panel that shows count and text about the moves
       for (View view: statsViews) {
@@ -85,16 +79,16 @@ public class Starter {
       gui.getContentPane().add(gameStats, BorderLayout.SOUTH);
       
       // TextArea that shows all the positions
-      gui.getContentPane().add(positionsView.show(), BorderLayout.NORTH);
+      gui.getContentPane().add(positionsView.show(), BorderLayout.CENTER);
       
       // Create panel for input
-	  JPanel gameInput = new JPanel(new FlowLayout(FlowLayout.CENTER));
+	  JPanel gameInput = new JPanel(new FlowLayout());
 	  gameInput.add(clickView.show());
 	  //gameInput.add(clickView.getButton());
 	  gameInput.add(resetView.getButton());
 
 	  // Set input view
-	  gui.getContentPane().add(gameInput, BorderLayout.CENTER);
+	  gui.getContentPane().add(gameInput, BorderLayout.NORTH);
 
 	  // Show the frame
 	  gui.setVisible(true);
