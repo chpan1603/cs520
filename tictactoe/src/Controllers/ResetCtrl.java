@@ -1,3 +1,6 @@
+package Controllers;
+import Models.Model;
+
 import java.util.ArrayList;
 
 //Controller for ResetView

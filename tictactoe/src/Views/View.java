@@ -1,3 +1,5 @@
+package Views;
+
 import java.util.ArrayList;
 
 import javax.swing.JComponent;

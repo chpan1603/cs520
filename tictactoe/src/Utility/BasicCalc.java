@@ -1,3 +1,15 @@
+package Utility;
+import Controllers.ClickCtrl;
+import Controllers.ResetCtrl;
+import Models.Positions;
+import Views.ClickView;
+import Views.CountView;
+import Views.MessageView;
+import Views.PositionsView;
+import Views.ResetView;
+import Views.View;
+
+
 import java.util.*;
 import javax.swing.*;
 
@@ -25,7 +37,7 @@ public class BasicCalc {
 	  //Initialize views
 	  CountView countView = new CountView();
 	  PositionsView positionsView = new PositionsView();
-	  TextView textView = new TextView();
+	  MessageView textView = new MessageView();
 	  ClickView clickView = new ClickView();
 	  ResetView resetView = new ResetView();
 
@@ -79,7 +91,7 @@ public class BasicCalc {
       // Create panel for input
 	  JPanel gameInput = new JPanel(new FlowLayout(FlowLayout.CENTER));
 	  gameInput.add(clickView.show());
-	  gameInput.add(clickView.getButton());
+	  //gameInput.add(clickView.getButton());
 	  gameInput.add(resetView.getButton());
 
 	  // Set input view

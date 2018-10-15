@@ -1,3 +1,6 @@
+package Views;
+import Controllers.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

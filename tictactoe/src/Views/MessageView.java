@@ -1,3 +1,7 @@
+package Views;
+import Models.Positions;
+import Utility.BasicCalc;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -9,6 +13,7 @@ public class MessageView implements View {
 
 	//Instance variables
 	//double median;
+	String message;
 	JTextField jtfMessage; //playerturn
 	String name;
 

@@ -1,3 +1,6 @@
+package Models;
+import Views.View;
+
 import java.util.ArrayList;
 
 //Model interface

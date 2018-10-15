@@ -1,7 +1,9 @@
+package Views;
+
 import java.util.ArrayList;
 
 import javax.swing.JTextArea;
-import javax.swing.text.JTextComponent;
+//import javax.swing.text.JTextComponent;
 import javax.swing.JComponent;
 
 public class PositionsView implements View {

@@ -1,3 +1,6 @@
+package Controllers;
+import Models.Model;
+
 //Controller interface
 public interface Controller {
 	
