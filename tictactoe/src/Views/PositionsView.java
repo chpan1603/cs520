@@ -15,16 +15,15 @@ public class PositionsView implements View {
 	public PositionsView() {
 		jtaNumbers = new JTextArea(10,50);
 		jtaNumbers.setEditable(false);
-		name = "Positions";
+		name = "Positions of Moves";
 	}
 
 	@Override
 	public void update(ArrayList<Integer> positions) {
 		jtaNumbers.setText("");
 		for (Integer num: positions) {
-			jtaNumbers.append(num + ",");
+			jtaNumbers.append((num+1) + ",");
 		}
-
 	}
 
 	@Override
