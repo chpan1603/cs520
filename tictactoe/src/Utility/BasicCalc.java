@@ -1,15 +1,9 @@
 package Utility;
 
-
-
 import java.util.*;
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
 
 /**
- * A simple class to calculate moves.
+ * A simple class to transform.
  */
 public class BasicCalc {
 	

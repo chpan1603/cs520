@@ -6,8 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-//View for reset button. Reasoning behind having my own reset view for the reset button is that another
-//controller can be added that affects a different view. This allows for flexibility that InputView did not offer.
+//View for reset button.
 
 public class ResetView implements View {
 
@@ -32,7 +31,7 @@ public class ResetView implements View {
 	}
 
 	@Override
-	public void update(ArrayList<Integer> numbers) {
+	public void update(ArrayList<Integer> positions) {
 
 	}
 

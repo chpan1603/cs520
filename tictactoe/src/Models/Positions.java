@@ -59,7 +59,7 @@ public class Positions implements Model {
 	}
 
 	/**
-	 * Compute the turn/winner of the game.
+	 * Compute the turn/winner/end of the game.
 	 */
 	public static String showmessage(int ... positions) {
 	    int len = positions.length;
@@ -67,6 +67,7 @@ public class Positions implements Model {
 	    	if (len%2 == 1) return "'O': Player 2";
 	    	else return "'X': Player 1";
 	    }
+	    else if (len == 9) return "Game ends in a draw";
 	    else {
 	    	ArrayList<ArrayList<int[]>> map = winMap();
 	    	int lastMove = positions[len-1];
@@ -77,11 +78,11 @@ public class Positions implements Model {
 	    			if (i%2 == 0) moves[i/2] = positions[i];
 	    		}
 	    		for (int[] line : winLines) {
-	    			if (Arrays.asList(moves).contains(line[0]) && Arrays.asList(moves).contains(line[1])) {
+	    			if (isSubset(moves, line)) {
 	    				return "Player 1 wins!";
 	    			}
 	    		}
-	    		return "Game ends in a draw";
+	    		return "'O': Player 2";
 	    	} 
 	    	else { // Check whether player 2 wins
 	    		int[] moves = new int[len/2];
@@ -89,15 +90,16 @@ public class Positions implements Model {
 	    			if (i%2 == 1) moves[i/2] = positions[i];
 	    		}
 	    		for (int[] line : winLines) {
-	    			if (Arrays.asList(moves).contains(line[0]) && Arrays.asList(moves).contains(line[1])) {
+	    			if (isSubset(moves, line)) {
 	    				return "Player 2 wins!";
 	    			}
 	    		}
-	    		return "Game ends in a draw";
+	    		return "'X': Player 1";
 	    	}	    	
 	    }
 	}
 	
+	// Helper method
 	public static ArrayList<ArrayList<int[]>> winMap() {
 		int[] line01 = { 1, 2 };
 		int[] line02 = { 4, 8 };
@@ -135,7 +137,7 @@ public class Positions implements Model {
 		line4.add(line41);
 		line4.add(line42);
 		line4.add(line43);
-		line4.add(line43);
+		line4.add(line44);
 		
 		int[] line51 = { 3, 4 };
 		int[] line52 = { 2, 8 };
@@ -178,5 +180,21 @@ public class Positions implements Model {
 		
 		return lines;
 	}
+	
+	// Helper method
+	public static boolean isSubset(int arr1[], int arr2[]) {
+	    int i = 0;
+	    int j = 0;
+	    int m = arr1.length;
+	    int n = arr2.length;	    
+	    for (i=0; i<n; i++) {
+	        for (j = 0; j<m; j++) {
+	           if(arr2[i] == arr1[j]) break;
+	        }
+	        if (j == m) return false;
+	    }
+	    return true;
+	}
 
 }
+

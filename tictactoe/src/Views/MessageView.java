@@ -3,10 +3,8 @@ import Models.Positions;
 import Utility.BasicCalc;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import javax.swing.JTextField;
-import javax.swing.text.JTextComponent;
 import javax.swing.JComponent;
 
 public class MessageView implements View {

@@ -1,5 +1,7 @@
 package Views;
 import Controllers.Controller;
+import Models.Positions;
+import Utility.BasicCalc;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,11 +28,12 @@ public class ClickView implements View {
             game.add(blocks[i]);
             blocks[i].addActionListener(new ActionListener() {
             	
-            	@Override
+            	//@Override
         		public void actionPerformed(ActionEvent e) {
             		for (int j = 0; j<9 ;j++) {
-            			if(e.getSource()==blocks[j]) num = j;
-            			break;
+            			if(e.getSource()==blocks[j]) {
+            				num = j;
+            			}
             		}
 
         			for (Controller ctrl: controllers) {
@@ -46,15 +49,21 @@ public class ClickView implements View {
 
 	@Override
 	public void update(ArrayList<Integer> positions) {
-		for (int pos = 0; pos < positions.size(); pos++) {
-			if (pos%2 == 1) {
-				blocks[pos].setText("O");
-				blocks[pos].setEnabled(false);
-			}
-			else {
-				blocks[pos].setText("X");
-				blocks[pos].setEnabled(false);
-			}
+		int len = positions.size();
+		int lastMove = positions.get(len-1);
+		if (len%2 == 1) {
+			blocks[lastMove].setText("X");
+			blocks[lastMove].setEnabled(false);
+		}
+		else {
+			blocks[lastMove].setText("O");
+			blocks[lastMove].setEnabled(false);
+		}
+		String message = Positions.showmessage(BasicCalc.getArrayInteger(positions));
+		if (message == "Player 1 wins!" || message == "Player 2 wins!") {
+			for (int i = 0;i<9;i++) {
+                blocks[i].setEnabled(false);
+            }	
 		}
 	}
 
@@ -62,6 +71,7 @@ public class ClickView implements View {
 	public void reset() {
 		for (int pos = 0; pos < 9; pos++) {
 			blocks[pos].setText("");
+			blocks[pos].setEnabled(true);
 		}
 	}
 

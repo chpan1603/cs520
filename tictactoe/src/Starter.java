@@ -2,22 +2,17 @@ import Controllers.*;
 import Models.*;
 import Views.*;
 
-
 import java.util.*;
 import javax.swing.*;
 
 import java.awt.*;
-import java.awt.event.*;
 
 /**
- * A simple class to calculate moves.
+ * A simple class to play TicTacToe.
  */
-public class Starter {
-	
+public class Starter {	
 
 	// Store all collected numbers
-	private static ArrayList<Integer> data = new ArrayList<Integer>();
-
 	public static void main(String ... args) {
 
 	  //Initialize controllers
@@ -94,9 +89,6 @@ public class Starter {
 	  gui.setVisible(true);
 
 	}
-	
-	
-
 }
 
 
