@@ -18,6 +18,7 @@ public class MessageView implements View {
 		//median = 0;
 		jtfMessage = new JTextField(15);
 		jtfMessage.setEditable(false);
+		jtfMessage.setText("Player 1 to play 'X'");
 		name = "Message";
 	}
 
