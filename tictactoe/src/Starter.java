@@ -1,6 +1,6 @@
-import Controllers.*;
-import Models.*;
-import Views.*;
+import controller.*;
+import model.*;
+import view.*;
 
 import java.util.*;
 import javax.swing.*;

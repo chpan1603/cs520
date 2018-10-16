@@ -1,6 +1,5 @@
-package Views;
-import Models.Positions;
-import Utility.BasicCalc;
+package view;
+import model.Positions;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,7 @@ public class MessageView implements View {
 
 	@Override
 	public void update(ArrayList<Integer> positions) {
-		message = Positions.showmessage(BasicCalc.getArrayInteger(positions));
+		message = Positions.showmessage(Positions.getArrayInteger(positions));
 
 		//Set text
 		jtfMessage.setText(message);

@@ -1,5 +1,5 @@
-package Views;
-import Controllers.Controller;
+package view;
+import controller.Controller;
 
 import javax.swing.*;
 import java.awt.*;

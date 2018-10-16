@@ -1,7 +1,6 @@
-package Views;
-import Controllers.Controller;
-import Models.Positions;
-import Utility.BasicCalc;
+package view;
+import controller.Controller;
+import model.Positions;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,7 +58,7 @@ public class ClickView implements View {
 			blocks[lastMove].setText("O");
 			blocks[lastMove].setEnabled(false);
 		}
-		String message = Positions.showmessage(BasicCalc.getArrayInteger(positions));
+		String message = Positions.showmessage(Positions.getArrayInteger(positions));
 		if (message == "Player 1 wins!" || message == "Player 2 wins!") {
 			for (int i = 0;i<9;i++) {
                 blocks[i].setEnabled(false);
@@ -92,7 +91,5 @@ public class ClickView implements View {
 	public JButton[] getButton() {
 		return blocks;
 	}
-
-
 
 }

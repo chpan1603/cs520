@@ -1,5 +1,5 @@
-package Models;
-import Views.View;
+package model;
+import view.View;
 
 import java.util.ArrayList;
 

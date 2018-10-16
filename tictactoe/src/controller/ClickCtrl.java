@@ -1,14 +1,14 @@
-package Controllers;
-import Models.Model;
+package controller;
+import model.Model;
 
 import java.util.ArrayList;
 
-//Controller for ResetView
-public class ResetCtrl implements Controller {
+//Controller for ClickView
+public class ClickCtrl implements Controller {
 
 	ArrayList<Model> models;
 
-	public ResetCtrl() {
+	public ClickCtrl() {
 		models = new ArrayList<Model>();
 	}
 
@@ -19,9 +19,9 @@ public class ResetCtrl implements Controller {
 
 	@Override
 	public void updateModels(Integer pos) {
-		//New ArrayList resets model in Positions.java
+
 		for (Model model: models) {
-			model.update(new ArrayList<Integer>());
+			model.addData(pos);
 		}
 	}
 
