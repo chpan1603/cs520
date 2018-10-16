@@ -3,14 +3,14 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import Controllers.*;
-import Models.*;
-import Views.*;
+import controller.*;
+import model.*;
+import view.*;
 
 /**
  * A view test class.
  * Test1 tests ClickView.
- * Test2 tests ResetView.
+ * Test2 tests reset.
  */
 public class ViewTest {
     @Test

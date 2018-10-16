@@ -3,9 +3,9 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import Controllers.*;
-import Models.*;
-import Views.*;
+import controller.*;
+import model.*;
+import view.*;
 
 /**
  * A model test class.
